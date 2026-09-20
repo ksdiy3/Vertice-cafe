@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vértice Café — Demonstração</title>
+  <meta name="description" content="Site demonstrativo de uma cafeteria moderna.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f7f2e9;--ink:#1e1b18;--muted:#6f675e;--accent:#a75b35;--card:#fffaf2;--line:#dfd5c7}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif}
+    .wrap{max-width:1120px;margin:auto;padding:0 24px}.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+    .logo{font-weight:700;letter-spacing:.08em}.links{display:flex;gap:24px}.links a{color:var(--ink);text-decoration:none;font-size:14px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:70px 0 100px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700;font-size:12px}
+    h1,h2{font-family:"Playfair Display",serif;line-height:1.05;margin:14px 0}h1{font-size:clamp(48px,7vw,82px);max-width:700px}h2{font-size:42px}
+    p{color:var(--muted);line-height:1.7}.hero p{font-size:18px;max-width:580px}.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:700}.primary{background:var(--ink);color:white}.secondary{border:1px solid var(--line);color:var(--ink)}
+    .photo{min-height:470px;border-radius:28px;background:linear-gradient(135deg,#4a2b1d,#b76b40 48%,#e3b07e);position:relative;overflow:hidden;box-shadow:0 25px 60px #3d2b1d22}
+    .photo:after{content:"☕";position:absolute;font-size:170px;right:30px;bottom:20px;transform:rotate(-8deg);filter:drop-shadow(0 20px 12px #0004)}
+    section{padding:90px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);padding:28px;border:1px solid var(--line);border-radius:20px}
+    .price{font-weight:700;color:var(--accent);font-size:22px}.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+    footer{padding:35px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
+    @media(max-width:800px){.hero,.about{grid-template-columns:1fr}.photo{min-height:320px}.grid{grid-template-columns:1fr}.links{display:none}.hero{padding:35px 0 70px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <div class="logo">VÉRTICE CAFÉ</div>
+    <nav class="links"><a href="#cardapio">Cardápio</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" style="border:0">
+      <div>
+        <div class="eyebrow">Café • Brunch • Doces</div>
+        <h1>Seu café favorito, do seu jeito.</h1>
+        <p>Um espaço tranquilo para começar o dia, encontrar amigos e tomar um café feito com cuidado.</p>
+        <div class="buttons"><a class="btn primary" href="#cardapio">Ver cardápio</a><a class="btn secondary" href="#contato">Fale conosco</a></div>
+      </div>
+      <div class="photo" aria-label="Imagem decorativa de café"></div>
+    </section>
+
+    <section id="cardapio">
+      <div class="wrap">
+        <div class="eyebrow">Destaques</div><h2>Feito na hora.</h2>
+        <div class="grid">
+          <article class="card"><h3>Capuccino da casa</h3><p>Espresso, leite vaporizado e uma espuma cremosa.</p><div class="price">R$ 12,90</div></article>
+          <article class="card"><h3>Toast de cogumelos</h3><p>Pão artesanal, cogumelos salteados e ervas frescas.</p><div class="price">R$ 24,90</div></article>
+          <article class="card"><h3>Bolo de chocolate</h3><p>Massa úmida com cobertura intensa de chocolate.</p><div class="price">R$ 14,90</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="wrap about">
+        <div><div class="eyebrow">Nossa história</div><h2>Pequeno no tamanho. Grande no sabor.</h2></div>
+        <div><p>O Vértice é uma cafeteria fictícia criada para esta demonstração. O layout mostra como um site comercial pode apresentar uma marca, produtos, preços e canais de contato de forma simples e profissional.</p><p>Esse mesmo modelo pode ser adaptado para restaurantes, barbearias, lojas, prestadores de serviço e outros negócios.</p></div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrap">
+        <div class="eyebrow">Visite</div><h2>Vamos tomar um café?</h2>
+        <p>Rua Exemplo, 123 — Centro<br>Seg–Sáb, 08h às 19h</p>
+        <div class="buttons"><a class="btn primary" href="https://wa.me/5511999999999">Chamar no WhatsApp</a><a class="btn secondary" href="mailto:contato@verticecafe.example">Enviar e-mail</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© 2026 Vértice Café — demonstração</span><span>Site demonstrativo</span></footer>
+</body>
+</html>
